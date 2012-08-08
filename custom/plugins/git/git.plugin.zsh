@@ -1,7 +1,14 @@
 alias gs='git status'
 alias gd='git diff'
+alias gb='git branch'
+alias gp='git push'
+alias gpl='git pull'
 alias gdc='git diff --cached'
 alias gpq='git pull-request'
+alias gco='git checkout'
+alias gcm='git commit -am'
+alias ga='git add'
+alias gcnb='git checkout -b'
 alias gld="gl | grep Updating | cut -d ' ' -f2 | xargs git diff"
 alias grm="git status | awk '/deleted/{print \$3}' | xargs git rm"
 alias gm='git merge --no-ff'
@@ -42,7 +49,7 @@ function git_diff_count() {
 }
 
 function git_diff_clean() {
-  foreach b (`git_diff_count | awk '/([a-zA-Z0-9]+) 0/{print $1}'`); gbd trobrock $b; end
+  foreach b (`git_diff_count | awk '/([a-zA-Z0-9]+) 0/{print $1}'`); gbd medius $b; end
 }
 
 function git_clean_remote() {
