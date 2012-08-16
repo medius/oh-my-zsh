@@ -8,6 +8,7 @@ alias gpq='git pull-request'
 alias gco='git checkout'
 alias gcm='git commit -am'
 alias ga='git add'
+alias ga='git log'
 alias gcnb='git checkout -b'
 alias gld="gl | grep Updating | cut -d ' ' -f2 | xargs git diff"
 alias grm="git status | awk '/deleted/{print \$3}' | xargs git rm"
