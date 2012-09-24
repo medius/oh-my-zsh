@@ -29,9 +29,17 @@ ZSH_THEME="puru"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git textmate ruby osx bundler) 
+plugins=(rails git ruby bundler zsh-syntax-highlighting) 
 
 source $ZSH/oh-my-zsh.sh
 
+source ~/.aliases
+alias knife='nocorrect knife'
+alias cookbook='nocorrect cookbook'
+alias gitx='nocorrect gitx'
+
 # Customize to your needs...
-export PATH=$PATH:/usr/local/mysql/bin:~/Library/Miniapps
+export PATH=/sw/bin:/sw/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/X11R6/bin
+# export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
